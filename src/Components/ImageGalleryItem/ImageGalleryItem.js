@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ImageGalleryItem.module.css';
 
-const ImageGalleryItem = ({ url, urlLarge, id, onShowLargeImg }) => (
-  <li key={id} className="ImageGalleryItem">
+const ImageGalleryItem = ({ url, onShowLargeImg }) => (
+  <li className="ImageGalleryItem">
     <img
       onClick={onShowLargeImg}
       src={url}
-      data-source={urlLarge}
       alt=""
       className={styles.imageGalleryItem_image}
     />
@@ -16,7 +15,6 @@ const ImageGalleryItem = ({ url, urlLarge, id, onShowLargeImg }) => (
 
 ImageGalleryItem.propTypes = {
   url: PropTypes.string.isRequired,
-  urlLarge: PropTypes.string.isRequired,
   onShowLargeImg: PropTypes.func.isRequired,
 };
 

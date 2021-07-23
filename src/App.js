@@ -38,8 +38,8 @@ class App extends Component {
     }));
   };
 
-  showLargeImg = e => {
-    this.setState({ largeImg: e.currentTarget.dataset.source });
+  showLargeImg = path => {
+    this.setState({ largeImg: path });
     this.toggleModal();
   };
 
