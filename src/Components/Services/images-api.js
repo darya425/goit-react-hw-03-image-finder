@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-// axios.defaults.headers.common['Authorization'] =
-//   'Bearer 5891845-66174e067b1f9940a42957e0b';
-
 const fetchImages = ({ searchQuery = '', currentPage = 1, pageSize = 12 }) => {
   return axios
     .get(
